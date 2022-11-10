@@ -13,14 +13,19 @@ function Tools(){
                 mx={1}
                 py={[1, 2, 2]}
                 px={4}
-                borderRadius={5}
+                fontSize='16px'
+
+                
                 _hover={{ bg:"none" }}
                 aria-label="Courses"
                 fontWeight="normal"
                 onMouseEnter={onOpen}
                 onMouseLeave={onClose}
-                fontSize='xl'
                 className="btn"
+                font-fontFamily=" Roboto, sans-serif"
+                border="none"
+                bg="white"
+
             >
                 Tools {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
             </MenuButton>
