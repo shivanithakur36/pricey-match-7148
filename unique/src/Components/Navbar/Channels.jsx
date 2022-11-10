@@ -19,11 +19,16 @@ function Channels(){
                 aria-label="Courses"
                 px={4}
                 py={[1, 2, 2]}
+                border="none"
+                bg="white"
+                size='lg'
+                font-fontFamily=" Roboto, sans-serif"
 
                 onMouseLeave={onClose}
 
                 onMouseEnter={onOpen}
-                fontSize='xl'
+
+                fontSize='16px'
                 fontWeight="normal"
 
             >

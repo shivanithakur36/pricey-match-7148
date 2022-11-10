@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
-import {Container} from "@chakra-ui/react";
 import Navbar from "./Components/Navbar/Navbar";
-
+// import GetStartedPage from "./Pages/GetStartedPage"
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      {/* <GetStartedPage/> */}
+      {/* <MiddlePage/> */}
       
         
     </div>
