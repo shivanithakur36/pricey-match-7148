@@ -1,7 +1,34 @@
-
 import {Flex,Box,Image,Text,Input,Button} from "@chakra-ui/react";
+import {AppContext} from "../../Context/AppContext";
+import { useNavigate } from "react-router-dom";
+import {useState,} from 'react';
+import {useContext} from 'react';
+
 
 export default function Login(){
+
+
+    const [userData, setUserData] = useState({});
+    const { state, loginUser } = useContext(AppContext);
+    const navigate = useNavigate();
+  
+    const handleChange = (e) => {
+      let email = e.target.email;
+      let value = e.target.value;
+      setUserData({
+        ...userData,
+        [email]: value,
+      });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(userData);
+        loginUser(userData, navigate);
+        e.target.reset();
+      };
+
+
     return(
         <Flex border="1px solid red" w="100%" h="635px">
             <Box border="2px solid yellow" w="35%">
@@ -12,14 +39,16 @@ export default function Login(){
                     <Input   w="340px" backgroundColor=" #FFFFFF" height= "25px"
     padding= "10px"
     borderRadius= "4px"
+    onChange={handleChange}
     margin= "8px 0px 0px 60px"  border="1px solid grey"/>
                     <Text fontWeight="medium" margin="30px 0px 0px -290px">Password</Text>
-                    <Input w="340px" backgroundColor=" #FFFFFF" height= "25px"
+                    <Input     onChange={handleChange}
+ w="340px" backgroundColor=" #FFFFFF" height= "25px"
     padding= "10px"
     borderRadius= "4px"
     margin= "8px 0px 0px 60px"  border="1px solid grey" />
                     <Button   bg="rgb(44,75,255)"     margin= "20px 0px 0px 58px" 
- color="white" _hover={{bg:"rgb(31, 53, 179)"}} fontWeight="bold" height= "45px" w="365px" border="none" borderRadius="5px">Log In</Button>
+ color="white" _hover={{bg:"rgb(31, 53, 179)"}} fontWeight="bold" height= "45px" onClick={handleSubmit}  w="365px" border="none" borderRadius="5px">Log In</Button>
                 
                 <Flex fontWeight="bold" fontSize="12px" color="grey" margin="10px 0px 0px 60px" w="360px" h="50px"  justifyContent="space-between">
                     <Text>Create Your account</Text>
