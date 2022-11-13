@@ -8,7 +8,7 @@ export default function MiddlePage(){
 
     
 
-    GoToStartedPage = () =>{
+   const GoToStartedPage = () =>{
         useNavigate("/getstartedpage")
     }
     return(
@@ -124,7 +124,7 @@ w='40%' h='auto'  bg='blue.500' >
                     <Image src="https://i.ibb.co/xLtffhB/Screenshot-2022-09-29-172846.png" display={{base:"none",lg:"flex"}}/>
                     <Flex w="100%" h={{base:"400px", lg:"500px"}} bg="rgb(44, 75, 255)" direction="column" alignItems="center" justifyContent="center">
                         <Text w={{base:"90%", lg:"70%"}} mb="40px" fontSize={{base:"24px", lg:"30px"}} fontFamily="Poppins, sans-serif" color="white">140,000+ people like you use Buffer to build their brand on social media every month</Text>
-                        <Button border="none" borderRadius="5px" fontSize='18px' padding="30px" h="100px" w="200px" fontFamily="Poppins, sans-serif" bg="rgb(233,114,132)" _hover={{bg:"rgb(229, 87, 108)"}} color="white">Get started now</Button>
+                        <Button border="none" borderRadius="5px" fontSize='18px' padding="30px" h="100px" w="200px" fontFamily="Poppins, sans-serif" bg="rgb(233,114,132)" _hover={{bg:"rgb(229, 87, 108)"}} color="white" onClick={GoToStartedPage}>Get started now</Button>
                     </Flex>
                     <Image src="https://i.ibb.co/ZKt9pmq/Screenshot-2022-09-29-172926.png" display={{base:"none",lg:"flex"}}/>
                 </Flex>
