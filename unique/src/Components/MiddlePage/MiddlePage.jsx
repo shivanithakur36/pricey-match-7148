@@ -1,9 +1,16 @@
 
 
 import {Box,Flex,Text,Button,Image,Grid,GridItem,Heading} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function MiddlePage(){
+
+    
+
+    GoToStartedPage = () =>{
+        useNavigate("/getstartedpage")
+    }
     return(
         <Box 
         // border="6px solid red"  
@@ -15,7 +22,7 @@ export default function MiddlePage(){
                     <Text fontWeight="bold" fontFamily="sans-serif" fontSize="35px">Grow your audience on social and beyond</Text>
                     <Text>Buffer helps   you build an audience organically. We’re a values-driven company that provides affordable, intuitive, marketing tools for ambitious people and teams.</Text>
                 <Flex margin="30px 0px 0px 40px" h="60px" w="400px"  justifyContent="space-between">
-                    <Button h="30px" w="190px" padding="30px" borderRadius="5px" border="none" bgColor="blue" color="white" fontSize="16px" fontFamily="sans-serif">Get Started now</Button>
+                    <Button h="30px" w="190px" padding="30px" borderRadius="5px" border="none" bgColor="blue" color="white" fontSize="16px" fontFamily="sans-serif" onClick={GoToStartedPage}>Get Started now</Button>
                     <Button h="30px" w="190px" padding="30px" borderRadius="5px" border="1px solid blue" fontSize="16px" color="blue" bgColor="white" src="https://buffer.com/static/animation/SocialMedia.mp4" fontFamily="sans-serif">Watch Video</Button>
 
                 </Flex>
