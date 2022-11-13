@@ -7,13 +7,15 @@ import './App.css';
 // import Signup from "./Components/Pages/Signup";
 // import AllRoutes from "./Components/AllRoutes/AllRoutes";
 // import {useNavigate} from 'react-router-dom';
-import MiddlePage from "./Components/MiddlePage/MiddlePage";
+// import MiddlePage from "./Components/MiddlePage/MiddlePage";
+import AllRoutes from "./Routes/AllRoutes"
 function App() {
   return (
     <div className="App">
+      <AllRoutes/>
       {/* <Navbar/> */}
       {/* <Login/> */}
-      <MiddlePage/>
+      {/* <MiddlePage/> */}
       
       {/* <Footer/> */}
       {/* <AllRoutes/> */}

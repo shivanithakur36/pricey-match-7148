@@ -10,7 +10,7 @@ function Footer(){
     return (
         
 
-        <Flex  margin="auto" gap="70px"   justifyContent={{base:"center",lg:"space-between"}} w="90%" direction={{ lg:"row",base:"column"}}>
+        <Flex  margin="auto" gap="70px" marginTop="50px"  justifyContent={{base:"center",lg:"space-between"}} w="90%" direction={{ lg:"row",base:"column"}}>
             <Flex direction="column" alignItems={{lg:"flex-start",base:"center"}}>
 
                 {/* //buffer image */}
